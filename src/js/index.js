@@ -5,6 +5,7 @@
     var Util = FontPadding && FontPadding.Util;
 
     var fontPaddingState = {
+        isPossible: true,
         isTurnOn: false,
         isDrawerShow: false
     };
@@ -100,11 +101,14 @@
                 upDownGuider.show();
                 drawer.set();
             }.bind(this), 50);
+            setTimeout(function () {
+                fontPaddingState.isPossible = true;
+            }.bind(this), 60);
 
         }
 
         function setFontPadding (e) {
-            if (fontPaddingState.isTurnOn) {
+            if (fontPaddingState.isTurnOn && fontPaddingState.isPossible) {
                 e.preventDefault();
                 if (Util.isDrawerChild(e.target, document.getElementById(STUFF.DRAWER_ID))) {
                 } else {
@@ -115,6 +119,7 @@
                             if (e.target.childNodes.length > 1) {
                                 return;
                             }
+                            fontPaddingState.isPossible = false;
                             fontPaddingStore.texts = e.target.childNodes[0].textContent + '<br>' + e.target.childNodes[0].textContent;
                             fontPaddingStore.styles = {
                                 fontSize: window.getComputedStyle(e.target, null).getPropertyValue('font-size'),
