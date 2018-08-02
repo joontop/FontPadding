@@ -105,9 +105,9 @@
 
         function setFontPadding (e) {
             if (fontPaddingState.isTurnOn) {
+                e.preventDefault();
                 if (Util.isDrawerChild(e.target, document.getElementById(STUFF.DRAWER_ID))) {
                 } else {
-                    e.preventDefault();
                     fontPaddingStore.currentScrollTop = Util.getScrollTop();
                     for (var i = 0; i < txtNodes.length; i++) {
                         if (e.target === txtNodes[i].parentNode) {
