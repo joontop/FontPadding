@@ -6,6 +6,20 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'font-padding.js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: '/node_modules',
+        options: {
+          presets: [
+            ['env', {'targets': {'browsers': ['last 2 versions', '>= 5% in KR']}}]
+          ]
+        }
+      }
+    ]
   }
 }
 

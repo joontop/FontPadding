@@ -1,7 +1,4 @@
-if (typeof __FontPadding === 'undefined') {
-    __FontPadding = {}
-}
-__FontPadding.Stuff = {
+export default {
     DRAWER_ID: '__fontPaddingDrawer',
     DRAWER_TOGGLER_ID: '__fontPaddingDrawerToggler',
     DRAWER_TURNNER_ID: '__fontPaddingDrawerTurnner',

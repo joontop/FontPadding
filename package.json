@@ -10,6 +10,9 @@
     "url": "git+https://github.com/joontop/fontPadding.git"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
@@ -27,6 +30,7 @@
     "build": "npm run build:development"
   },
   "dependencies": {
+    "html2canvas": "^1.0.0-alpha.12",
     "webpack": "^4.16.3"
   }
 }
