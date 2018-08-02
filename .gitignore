@@ -1,0 +1,8 @@
+.idea
+.DS_Store
+*.iml
+*.log
+npm-debug*.*
+node_modules
+dist
+tools/dev/dev.environment.json
