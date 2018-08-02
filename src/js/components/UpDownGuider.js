@@ -39,12 +39,13 @@ __FontPadding.UpDownGuider = (function () {
             }
         },
         set: function () {
-            this.upElement.innerHTML = this.store.value.upSpacing || 0;
-            this.downElement.innerHTML = this.store.value.downSpacing || 0;
+            this.upElement.innerHTML = '<em class="__up1">' + this.store.value.upSpacing + '</em><em class="__up2">px</em>';
+            this.downElement.innerHTML = '<em class="__down1">' + this.store.value.downSpacing + '</em><em class="__down2">px</em>';
             this.upElement.style.top = this.store.position.upTop || 0;
             this.upElement.style.left = this.store.position.upLeft || 0;
             this.downElement.style.top = this.store.position.downTop || 0;
             this.downElement.style.left = this.store.position.downLeft || 0;
+
         },
         show: function () {
 
