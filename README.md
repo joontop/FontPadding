@@ -33,6 +33,37 @@ PC에서라면 브라우져를 캡쳐해서 포토샵이나 다른 툴로 바로
 끝.
 
 
+Font Padding Guide
+
+A 20px design guide came between the title and the explanation.
+
+The title text is font-size: 15px, line-height: 25px,
+
+The explanation text was font-size: 13px, line-height: 20px.
+
+Give margin and padding 20 px between title and explanation
+
+Is it the same as the design guide?
+
+It probably appears much wider than 20px.
+
+This is because there are basically font paddings depending on the font - size and line - height.
+
+If it is on the PC, you can capture the browser and immediately check Photoshop and other tools,
+
+Mobile is difficult to confirm. So I made it.
+
+At the bottom of the body to the markup's deliverables
+
+<script src = "https://joontop.github.io/FontPadding/build/font-padding1.0.0.js"> </ script>
+
+I will check it as soon as it adds like this.
+
+It is a lower button switch with two buttons.
+
+Just switch on and click on the text.
+
+the end.
 
 
 
