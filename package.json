@@ -10,16 +10,18 @@
     "url": "git+https://github.com/joontop/fontPadding.git"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-clean": "^0.4.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-connect": "^5.5.0",
-    "gulp-gh-pages": "^0.5.4",
-    "gulp-uglify": "^3.0.1",
-    "pump": "^3.0.0",
-    "run-sequence": "^2.2.1"
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "webpack-cli": "^3.1.0"
   },
   "scripts": {
-    "dev": "gulp build"
+    "build:development": "webpack --config webpack.config.js --mode=development",
+    "build:production": "webpack --config webpack.config.js --mode=production",
+    "build": "npm run build:development"
+  },
+  "dependencies": {
+    "html2canvas": "^1.0.0-alpha.12",
+    "webpack": "^4.16.5"
   }
 }
