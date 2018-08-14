@@ -118,7 +118,7 @@ eval("\n\nvar _Stuff = __webpack_require__(/*! ./Stuff */ \"./src/Stuff.js\");\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n//# sourceURL=webpack:///./src/util/Util.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nexports.default = function () {\n  var isTouchDevice = function isTouchDevice() {\n    return navigator.maxTouchPoints || \"ontouchstart\" in document.documentElement;\n  };\n\n  var getScrollTop = function getScrollTop() {\n    return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;\n  };\n\n  var getOffsetTop = function getOffsetTop(element) {\n    var value = 0;\n    if (element.offsetParent) {\n      do {\n        value += element.offsetTop;\n      } while (element = element.offsetParent);\n    }\n    return value;\n  };\n\n  var getOffsetLeft = function getOffsetLeft(element) {\n    var value = 0;\n    if (element.offsetParent) {\n      do {\n        value += element.offsetLeft;\n      } while (element = element.offsetParent);\n    }\n    return value;\n  };\n\n  var getRgbToHex = function getRgbToHex(r, g, b) {\n    if (r > 255 || g > 255 || b > 255) {\n      throw \"Invalid Color Component\";\n    }\n    return (r << 16 | g << 8 | b).toString(16);\n  };\n\n  return {\n    isTouchDevice: isTouchDevice,\n    getScrollTop: getScrollTop,\n    getOffsetTop: getOffsetTop,\n    getOffsetLeft: getOffsetLeft,\n    getRgbToHex: getRgbToHex\n  };\n}();\n\n//# sourceURL=webpack:///./src/util/Util.js?");
 
 /***/ })
 
